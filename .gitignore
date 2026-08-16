@@ -1,0 +1,8 @@
+
+# Local/private files
+discovery_engine.db
+*.db
+.env
+.env.*
+__pycache__/
+*.pyc

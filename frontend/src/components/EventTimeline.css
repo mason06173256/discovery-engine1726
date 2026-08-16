@@ -1,0 +1,135 @@
+.event-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.events-container {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #667eea 0%, transparent 100%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1rem;
+  margin-left: 2.5rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.1rem;
+  width: 28px;
+  height: 28px;
+  background: white;
+  border: 2px solid #667eea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-icon {
+  font-size: 1rem;
+}
+
+.timeline-content {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s;
+}
+
+.timeline-item:hover .timeline-content {
+  background: #f0f4ff;
+  border-color: #667eea;
+}
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  gap: 1rem;
+}
+
+.event-type {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.9rem;
+}
+
+.event-time {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+.event-description {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.85rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.event-metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.metadata-item {
+  font-size: 0.75rem;
+  color: #6b7280;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.metadata-key {
+  font-weight: 600;
+  color: #4b5563;
+  min-width: 60px;
+}
+
+.metadata-value {
+  flex: 1;
+  word-break: break-word;
+  font-family: 'Monaco', 'Courier New', monospace;
+  color: #374151;
+}
+
+.empty-state {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 0.95rem;
+}

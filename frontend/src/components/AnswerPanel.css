@@ -1,0 +1,90 @@
+.answer-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.answer-text {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.answer-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #1f2937;
+  word-break: break-word;
+}
+
+.answer-context {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+
+.context-label {
+  font-size: 0.85rem;
+  color: #667eea;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.context-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.context-list li {
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+}
+
+.answer-footer {
+  background: #f0f4ff;
+  border-radius: 6px;
+  padding: 0.75rem;
+  border-left: 3px solid #667eea;
+}
+
+.footer-note {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #4b5563;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.empty-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #6b7280;
+}
+
+.empty-state p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.empty-state .hint {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}

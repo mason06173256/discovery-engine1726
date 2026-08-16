@@ -1,0 +1,153 @@
+.research-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 1.5rem;
+  flex: 1;
+  min-height: 0;
+}
+
+.workspace-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: auto;
+}
+
+.workspace-right {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.panels-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  flex: 1;
+  min-height: 0;
+}
+
+.workspace-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.workspace-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 300px;
+}
+
+.panels-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.error-banner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ef4444;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-out;
+  z-index: 1000;
+}
+
+.error-banner button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+  .workspace-grid {
+    grid-template-columns: 300px 1fr;
+  }
+
+  .panels-container {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace-bottom {
+    height: auto;
+    max-height: 400px;
+  }
+
+  .panels-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .workspace-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .workspace-section {
+    padding: 1rem;
+  }
+
+  .workspace-bottom {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .research-workspace {
+    gap: 1rem;
+  }
+
+  .workspace-left {
+    gap: 1rem;
+  }
+
+  .workspace-section {
+    padding: 0.75rem;
+  }
+
+  .panels-container {
+    gap: 1rem;
+  }
+
+  .panels-row {
+    gap: 1rem;
+  }
+}
